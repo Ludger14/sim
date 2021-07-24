@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+.center{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+.row{
+    margin: 0;
+}
+.container{
+    padding: 40px 0;
+}
+p, li{
+    color: #444;
+    font-size: 14px;
+}
+header, .navbar{
+    /*background-color: #353D41;*/
+    padding: 0;    
+}
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.w50-white{
+    width: 50%;
+    background-color: white;
+}
+.logo{
+    margin-left: 80px;
+}
+.w50-green{
+    width: 50%;
+    background-color: #127c46;
+}
+nav.desktop{
+    text-align: center;
+}
+nav.desktop ul{
+    list-style-type: none;
+    margin-top: 22px;
+}
+nav.desktop ul li{
+    display: inline;
+    padding: 10px 25px;
+    font-size: 17px;
+}
+nav.desktop ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav.desktop ul li a:hover{
+    border-bottom: 3px solid white;
+    padding: 25px 0;
+}
+#logo{
+    width: 160px;
+}
+.navbar-brand{
+    padding: 0;
+    color: white;   
+}
+.navbar-brand:hover{    
+    color: white;
+}
+#navbar-links{
+    width: 50%;    
+}
+.navbar-expand-lg {    
+    background-color: #137b46;
+}
+#navbar-links a{
+    color: white;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1rem .8rem;
+}
+.layer{
+    width: 100%;
+    max-height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+.container-fluid{
+    padding: 0;
+}
+#mainSlider .carousel-inner, #mainSlider .carousel-item{
+    height: 90vh;
+}
+#mainSlider .carousel-caption{
+    top: 30%;
+}
+#mainSlider .carousel-caption h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+#mainSlider .carousel-caption p{
+    font-size: 22px;
+    margin-bottom: 100px;
+    font-weight: 300;
+    color: white;
+}
+.main-btn{
+    background-color: #127c46;
+    color: white;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+.main-btn:hover{
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border-color: #137b46;
+}
+.carousel-indicators .active{
+    background-color: #137b46;
+}
+.about-area{
+    background-color: #f9f9f9;
+}
+.main-title{
+    color: #137b46;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+.main-title::after{
+    content: "";
+    border-top: 2px solid #333;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+.about-title{
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.about-list{
+    list-style: none;
+    padding-left: 0;
+}
+.about-list li{
+    line-height: 30px;
+}
+.about-list li i{
+    color: #137b46;
+    margin-right: 15px;
+}
+.service-box{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.img-service{
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;    
+}
+.img-service img{
+    width: 100%;
+}
+.service-box i, .service-box h4{
+    transition: .5s;
+}
+.service-box i{
+    color: #444;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.service-box h4{    
+    font-size: 24px;
+    margin: 20px 0;
+}
+.service-box:hover > i, .service-box:hover > h4{
+    color: #137b46;
+}
+.circle-box div{
+    padding: 0 40px;
+}
+.progressbar-text{
+    font-weight: bold;
+    font-size: 32px;
+}
+#data-area{
+    display: flex;
+    flex-direction: row;
+}
+#data-area .quem-somos{
+    width: 50%;    
+    background: linear-gradient(90deg, rgba(15,130,66,1) 0%, rgba(24,115,73,1) 35%, rgba(16,128,67,1) 100%);
+}
+.quem-somos h2{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: left;
+    padding: 30px 140px;
+}
+.quem-somos p{
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;  
+    padding: 20px 140px 40px 140px;  
+}
+
+.quem-somos-dir{
+    width: 50%;
+    background-image: url('../img/infografia2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-body{
+    text-align: center;
+}
+#team-area{
+    background-color: #ccc;
+}
+#contact-area{
+    background: linear-gradient(90deg, rgba(15,130,66,1) 0%, rgba(24,115,73,1) 35%, rgba(16,128,67,1) 100%);
+}
+.contato-esq{
+    width: 50%;
+}
+.contato-esq h5{
+    font-size: 60px;
+    padding: 30px 0;
+    font-weight: bold;
+    color: white;
+}
+.contato-esq p{
+    font-size: 20px;
+    padding: 0 100px 0 0;
+    font-weight: normal;
+    color: white;
+    line-height: 1.6;
+}
+.contato-esq a{
+    text-decoration: none;
+    color: white;
+}
+.form{
+    width: 50%;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: white;
+    font-size: 17px;  
+    margin-bottom: 0;  
+}
+
+.form input[type=text]{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin: 5px 0;
+    font-size: 15px;
+    display: inline-block;
+    outline: 0;
+    border-radius: 5px;
+}
+.form textarea{
+    width: 100%;
+    height: 130px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin-top: 5px;
+    font-size: 15px;
+    display: inline-block;
+    outline: 0;
+    resize: vertical;
+}
+.form input[type=submit] {
+    cursor: pointer;
+    background-color: white;
+    color: #137b46;
+    border: 0;
+    width: 200px;
+    height: 40px;
+    display: block;
+    border-radius: 30px;
+    margin: 15px auto;
+    font-size: 20px;
+    outline: 0;
+}
+.txt-menor{
+    font-size: 17px;
+}
+nav.mobile{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    nav.desktop{
+        display: none;
+    }    
+    nav.mobile{
+		display: block;	
+        text-align: right;	
+	}
+	nav.mobile i{
+		font-size: 25px;
+		color: white;
+		position: relative;
+		top: 20px;
+		cursor: pointer;
+        right: 20px;
+	}
+    nav.mobile ul{
+		display: none;
+		position: absolute;
+		left: 0;
+		z-index: 999;
+		top: 73px;
+		background-color: white;
+		list-style: none;
+		width: 100%;
+		text-align: center;		
+	}
+	nav.mobile li{
+		border-bottom: 1px solid #ccc;
+		padding: 10px 0;
+	}
+    nav.mobile li:hover{
+		background-color: #137b46;		
+	}
+	nav.mobile li a{
+		text-decoration: none;
+		color: black;
+	}
+    .logo{
+        margin-left: 0;
+    }
+    #mainSlider .carousel-inner, #mainSlider .carousel-item{
+        height: 28vh;
+    }
+    #data-area{        
+        flex-direction: column;
+    }
+    #data-area > .quem-somos{
+        width: 100%;
+    }  
+    .quem-somos h2{
+        padding: 0 2%;
+        text-align: center;
+        font-size: 40px;
+    }
+    .quem-somos p{
+        padding: 20px 2%;
+        text-align: center;
+    }       
+    .quem-somos-dir{
+        width: 100%; 
+        display: none;       
+    }    
+    .contato-esq{
+        width: 100%;        
+    }
+    .contato-esq h5{
+        text-align: center;
+        font-size: 50px;
+        padding: 20px 0;
+    }
+    .contato-esq p{
+        text-align: center;
+        padding: 0 2% 30px 2%;
+    }
+    .form{
+        width: 100%;
+    }
+    form{
+        width: 90%;
+        margin: 0 auto;
+    }    
+}
