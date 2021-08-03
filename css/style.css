@@ -8,7 +8,7 @@ html, body{
     height: 100%;
 }
 .center{
-    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
     padding: 0 2%;
 }
@@ -175,12 +175,12 @@ nav.desktop ul li a:hover{
 }
 .service-box{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .img-service{
-    width: 200px;
+    width: 150px;
     height: 100px;
-    margin: 30px auto;    
+    margin: 10px auto;    
 }
 .img-service img{
     width: 100%;
@@ -217,17 +217,17 @@ nav.desktop ul li a:hover{
 }
 .quem-somos h2{
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     text-align: left;
-    padding: 30px 140px;
+    padding: 50px 0 0 0;
 }
 .quem-somos p{
     color: white;
     font-size: 18px;
     font-weight: normal;
-    text-align: left;  
-    padding: 20px 140px 40px 140px;  
+    text-align: left;
+    padding: 20px 0; 
 }
 
 .quem-somos-dir{
@@ -243,6 +243,21 @@ nav.desktop ul li a:hover{
 }
 #team-area{
     background-color: #ccc;
+}
+.fullteam{
+    width: 300px;
+    text-align: right;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(80%, 80%);
+}
+.fullteam a{
+    text-decoration: none;
+    color: white;
+}
+.fullteam h5{
+    font-size: 17px;
 }
 #contact-area{
     background: linear-gradient(90deg, rgba(15,130,66,1) 0%, rgba(24,115,73,1) 35%, rgba(16,128,67,1) 100%);
@@ -322,7 +337,16 @@ label{
 nav.mobile{
     display: none;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1200px){
+    .fullteam {
+        width: 300px;
+        text-align: center;
+        margin: 20px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 25px);
+    }
     nav.desktop{
         display: none;
     }    
@@ -330,7 +354,7 @@ nav.mobile{
 		display: block;	
         text-align: right;	
 	}
-	nav.mobile i{
+    nav.mobile i{
 		font-size: 25px;
 		color: white;
 		position: relative;
@@ -360,6 +384,25 @@ nav.mobile{
 		text-decoration: none;
 		color: black;
 	}
+    .carousel-caption, .carousel-indicators, .carousel-inner, .carousel-item, .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    #mainSlider{
+        width: 100%;
+        min-height: 500px;
+        background-image: url("../img/portada.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }  
+    .contato-esq h5 {        
+        padding: 0 0;        
+    }
+    .contato-esq p {        
+        padding: 0 30px 0 0;        
+    }
+}
+@media screen and (max-width: 768px){	
     .logo{
         margin-left: 0;
     }
@@ -373,9 +416,9 @@ nav.mobile{
         width: 100%;
     }  
     .quem-somos h2{
-        padding: 0 2%;
+        padding: 40px 2% 20px 2%;
         text-align: center;
-        font-size: 40px;
+        font-size: 50px;
     }
     .quem-somos p{
         padding: 20px 2%;
@@ -395,7 +438,7 @@ nav.mobile{
     }
     .contato-esq p{
         text-align: center;
-        padding: 0 2% 30px 2%;
+        padding: 0 2% 0 2%;
     }
     .form{
         width: 100%;
@@ -404,4 +447,10 @@ nav.mobile{
         width: 90%;
         margin: 0 auto;
     }    
+    
+}
+@media screen and (max-width: 390px){	
+    .main-title {        
+        font-size: 30px;        
+    }
 }
