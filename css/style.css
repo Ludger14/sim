@@ -6,6 +6,7 @@
 }
 html, body{
     height: 100%;
+    background-color: white;
 }
 .center{
     width: 90%;
@@ -241,20 +242,59 @@ nav.desktop ul li a:hover{
 .card-body{
     text-align: center;
 }
-#team-area{
+.team{
     background-color: #ccc;
+    padding: 50px 0 0px 0;
+}
+.team > .container{
+    padding: 0;
+}
+.team > .center{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 240px;
+    margin: 10px auto;
+}
+.card-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-img{
+    width: 100%;
+    margin: 0 auto;
+}
+.card-img img{
+    width: 100%;
+}
+.card-text{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.card-text h5{
+    font-size: 16px;
+    padding: 8px;
+    font-weight: bold;
+}
+.card-text p{
+    font-size: 15px;
+    padding: 0;
+    font-weight: normal;
 }
 .fullteam{
-    width: 300px;
-    text-align: right;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(80%, 80%);
+    width: 240px;
+    text-align: center;
+    margin: 30px auto;
 }
 .fullteam a{
     text-decoration: none;
-    color: white;
+    color: #137b46;
 }
 .fullteam h5{
     font-size: 17px;
@@ -337,16 +377,7 @@ label{
 nav.mobile{
     display: none;
 }
-@media screen and (max-width: 1200px){
-    .fullteam {
-        width: 300px;
-        text-align: center;
-        margin: 20px auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: translate(0, 25px);
-    }
+@media screen and (max-width: 1200px){    
     nav.desktop{
         display: none;
     }    
@@ -384,17 +415,7 @@ nav.mobile{
 		text-decoration: none;
 		color: black;
 	}
-    .carousel-caption, .carousel-indicators, .carousel-inner, .carousel-item, .carousel-control-prev, .carousel-control-next{
-        display: none;
-    }
-    #mainSlider{
-        width: 100%;
-        min-height: 500px;
-        background-image: url("../img/portada.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }  
+     
     .contato-esq h5 {        
         padding: 0 0;        
     }
@@ -402,12 +423,13 @@ nav.mobile{
         padding: 0 30px 0 0;        
     }
 }
-@media screen and (max-width: 768px){	
+@media screen and (max-width: 840px){	
     .logo{
         margin-left: 0;
-    }
+    }  
+    
     #mainSlider .carousel-inner, #mainSlider .carousel-item{
-        height: 28vh;
+        height: auto;
     }
     #data-area{        
         flex-direction: column;
@@ -449,8 +471,18 @@ nav.mobile{
     }    
     
 }
+@media screen and (max-width: 768px){	
+    .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
 @media screen and (max-width: 390px){	
     .main-title {        
         font-size: 30px;        
     }
+    /*
+    .carousel-caption, .carousel-indicators, .carousel-inner, .carousel-item, .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }*/
 }

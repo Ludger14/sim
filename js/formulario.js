@@ -4,6 +4,9 @@ $('input[type=text]').focus(function(){
 $('textarea[name=mensagem]').focus(function(){
     resetarCampoInvalido($(this));
 })
+
+let alert = document.querySelector("#alert");
+$('#alert').css('display','none');
 let form = document.querySelector("#contactForm");
 form.addEventListener("submit", function(event){
     event.preventDefault();    
@@ -21,19 +24,11 @@ form.addEventListener("submit", function(event){
     }else if(verificarMensagem(mensagem) == false){
         aplicarCampoInvalido($('textarea[name=mensagem]'));
     }else{
-        $.ajax({			
-			url: 'sendemail.php',
-			method:'POST',			
-			dataType:'html',			
-            data: ({nome: $("input[name='nome']").val(), email: $("input[name='email']").val(), assunto: $("input[name='assunto']").val(), mensagem: $("textarea[name='mensagem']").val()}),
-            success: function() {
-                $('.sucesso').fadeIn();
-            }, error: function(xhr, status, error) {
-                $('.erro').fadeIn();               
-                console.log(xhr.responseText);
-            }
-		});
-        return false;
+        $('#alert').css('display','block');   
+        resetarCampo($('input[name=nome]'));
+        resetarCampo($('input[name=email]'));
+        resetarCampo($('input[name=assunto]'));
+        resetarCampo($('textarea[name=mensagem]'));     
     }   
 })
 function aplicarCampoInvalido(el){
@@ -43,6 +38,11 @@ function aplicarCampoInvalido(el){
     //el.data('invalido', 'true');
 }
 function resetarCampoInvalido(el){
+    el.css('color','black');
+    el.css('border','1px solid white');
+    el.val('');
+}
+function resetarCampo(el){
     el.css('color','black');
     el.css('border','1px solid white');
     el.val('');
@@ -82,4 +82,10 @@ function verificarMensagem(mensagem){
     if (mensagem == '') {
         return false;
     }    
+}
+function closeAlert(){
+    this.alert = false;    
+}
+function closeAlertD(){
+    this.alertD = false;
 }
